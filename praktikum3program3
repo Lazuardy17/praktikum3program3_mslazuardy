@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class praktikum3program3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("======== Selamat Datang di Toko Charlie ========");
+        System.out.print("Banyak Pembelian Barang: ");
+        int banyakBarang = input.nextInt();
+        
+        System.out.println("==============================================");
+        if (banyakBarang < 0) {
+            System.out.println("ERROR - Inputan harus lebih dari 0");
+        } else {
+            int cashback = 0;
+
+            if (banyakBarang % 7 == 0) {
+                cashback = 5500;
+            }
+
+            int tambahanBarang = 0;
+
+            if (banyakBarang >= 3) {
+                tambahanBarang = (banyakBarang / 3);
+            }
+
+            int jumlahBarang = banyakBarang + tambahanBarang;
+
+            System.out.println("Cashback : Rp " + cashback);
+            System.out.println("Tambahan Barang : " + tambahanBarang);
+            System.out.println("Jumlah Barang : " + jumlahBarang);
+        }
+    }
+}
